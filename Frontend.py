@@ -38,6 +38,7 @@ def update_suggestion():
         suggestion_label.config(text="Chew more!")
     else:
         suggestion_label.config(text="Healthy Chewing!")
+        play_healthy_chewing_music()
 
 def process_data():
     global chewing_count, not_chewing_count
@@ -64,7 +65,15 @@ def process_data():
     except KeyboardInterrupt:
         print("Data collection stopped.")
         ser.close()
-        
+
+def play_healthy_chewing_music():
+    import pygame
+    pygame.init()
+    pygame.mixer.music.load('./Assets/L.wav')
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy() == True:
+        continue
+
 import threading
 data_thread = threading.Thread(target=process_data)
 data_thread.start()
