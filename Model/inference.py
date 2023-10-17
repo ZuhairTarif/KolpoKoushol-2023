@@ -1,7 +1,7 @@
 import pickle as pkl
 import joblib as jl
-model = jl.load("./model_weights_jlib_rf.pkl")
-normalizer = jl.load("./data_normalizer_rf.pkl")
+model = jl.load("./Model/model_weights_jlib_rf.pkl")
+normalizer = jl.load("./Model/data_normalizer_rf.pkl")
 
 # 10 flattened samples for one data point
 # sample_data = [[-9.38,  4.39,  0.12, -9.34,  4.39,  0.2 , -9.45,  4.35,  0.12,
