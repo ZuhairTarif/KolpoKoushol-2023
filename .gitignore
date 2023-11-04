@@ -1,5 +1,4 @@
-__pycache__
-./Model/__pycache__
-.ipynb_checkpoints
-.idea
-.vscode
+*.__pycache__
+*.ipynb_checkpoints
+*.idea
+*.vscode
